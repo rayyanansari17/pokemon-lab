@@ -1,6 +1,6 @@
 # 🧪 Pokémon Research Lab
 
-**Project Link:** https://pokemonlab.rayyanansari.in/ *(replace with your deployed URL)*
+**Project Link:** https://pokemonlab.rayyanansari.in/ 
 
 A high-performance, dark-mode-first SaaS-style web application that aggregates the complete Pokémon dataset from the public **PokeAPI** and provides an advanced interface to search, analyze, edit, extend, and export large datasets.  
 The application is built to handle thousands of rows smoothly using virtualization and modern state management.
@@ -11,7 +11,7 @@ The application is built to handle thousands of rows smoothly using virtualizati
 
 > Below is a short demo showcasing the application features such as full Pokédex fetch, search, inline editing, dynamic columns, and CSV export.
 
-🔗 *(Add demo video link here if available)*
+🔗 *https://youtu.be/8pkr02e_3TI*
 
 ---
 
@@ -54,6 +54,6 @@ The application is built to handle thousands of rows smoothly using virtualizati
 Pokémon data is sourced from the public PokeAPI
 https://pokeapi.co/
 
-## 📂 Project Folder Structure
+
 
 
