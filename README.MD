@@ -42,9 +42,12 @@ The application is built to handle thousands of rows smoothly using virtualizati
    npm install
    # or
    pnpm install
-3. Start the development server:
+   ```
 
-npm run dev
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
 ## 🌐 Data Source
 
