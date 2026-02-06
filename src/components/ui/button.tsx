@@ -1,0 +1,56 @@
+import * as React from 'react';
+import { cn } from '@/lib/utils';
+import { cva, type VariantProps } from 'class-variance-authority';
+
+const buttonVariants = cva(
+    "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+    {
+        variants: {
+            variant: {
+                default: "bg-primary text-primary-foreground hover:bg-primary/90",
+                destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+                outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+                secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+                ghost: "hover:bg-accent hover:text-accent-foreground",
+                link: "text-primary underline-offset-4 hover:underline",
+            },
+            size: {
+                default: "h-10 px-4 py-2",
+                sm: "h-9 rounded-md px-3",
+                lg: "h-11 rounded-md px-8",
+                icon: "h-10 w-10",
+            },
+        },
+        defaultVariants: {
+            variant: "default",
+            size: "default",
+        },
+    }
+);
+// Note: We need class-variance-authority, but I can implement a simpler version if CVA is not installed. 
+// Ah, I missed CVA in the install list. I should install it or write plain CSS logic.
+// Simpler approach for now without CVA to save a step, using switch or conditional, 
+// OR I'll just install CVA. It's standard.
+// I'll install CVA in the next step. For now I write the code assuming it exists.
+
+interface ButtonProps
+    extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+    asChild?: boolean;
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+    ({ className, variant, size, asChild = false, ...props }, ref) => {
+        // Stubbing CVA behavior if not present, but I will install it.
+        return (
+            <button
+                className={cn(buttonVariants({ variant, size, className }))}
+                ref={ref}
+                {...props}
+            />
+        );
+    }
+);
+Button.displayName = "Button";
+
+export { Button, buttonVariants };
